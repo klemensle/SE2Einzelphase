@@ -32,7 +32,13 @@ public class MainActivity extends AppCompatActivity {
             this.noDividend = true;
         }
         else {
-            this.dividend = Double.parseDouble(value);
+            try {                                                                                   /* For the unusual case, that something happened with the input */
+                this.dividend = Double.parseDouble(value);
+            }
+            catch (Exception e){
+
+            }
+
         }
     }
 
@@ -51,7 +57,13 @@ public class MainActivity extends AppCompatActivity {
             this.divisorZero = true;
         }
         else {
-            this.divisor = Double.parseDouble(value);
+            try {                                                                                   /* Same as the last exception */
+                this.divisor = Double.parseDouble(value);
+            }
+            catch (Exception e){
+
+            }
+
         }
 
     }
